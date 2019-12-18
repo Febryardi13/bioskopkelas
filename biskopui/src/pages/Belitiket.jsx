@@ -5,6 +5,7 @@ import {Redirect} from 'react-router-dom'
 import Axios from 'axios'
 import {Modal,ModalBody,ModalFooter} from 'reactstrap'
 import Numeral from 'numeral'
+import {Link} from 'react-router-dom'
 
 class Belitiket extends Component {
     state = { 
@@ -21,7 +22,9 @@ class Belitiket extends Component {
     
     
     componentDidMount(){
-       this.onJamChange() //biar codingan dapat dijalankan berulang
+        if(this.state.location !== undefined){
+            this.onJamChange() //biar codingan dapat dijalankan berulang
+         }
     }
     
     onJamChange=()=>{
@@ -189,52 +192,6 @@ class Belitiket extends Component {
             )
         })
         return jsx
-        // var arrSeat = []
-        // for (let i=0;i<this.state.baris;i++){
-        //     arrSeat.push([])
-        //     for(let j=0; j<this.state.seats/this.state.baris;j++){
-        //         arrSeat[i].push(1)
-        //     }
-        // }
-        // console.log(this.state.booked)
-        // for(var j=0;j<this.state.booked.length;j++){
-        //     arrSeat[this.state.booked[j].row][this.state.booked[j].seat]=3
-        // }
-
-        // for(let a=0; a<this.state.pilihan.length;a++){
-        //     arrSeat[this.state.pilihan[a].row][this.state.pilihan[a].seat]=2
-        // }
-
-        // var alphabet = 'abcdefghijklmnopqrstuvwxyz'.toUpperCase()
-        // var jsx = arrSeat.map((val,index)=>{
-        //     return (
-        //         <div key={index}>
-        //             {
-        //                 val.map((val1,i)=>{
-        //                     if(val1===3){
-        //                         return (
-        //                             <button key={i} disabled className='rounded btn-disble mr-2 mt-2 bg-danger text-center'>
-        //                                 {alphabet[index] + (i+1)}
-        //                             </button>
-        //                         )
-        //                     }else if(val1===2){
-        //                         return (
-        //                             <button key={i} onClick={()=>this.onCancelSeactClick(index,i)} className='rounded btn-order mr-2 mt-2 btn-pilih text-center'>
-        //                                 {alphabet[index] + (i+1)}
-        //                             </button>
-        //                         )
-        //                     }
-        //                     return (
-        //                         <button key={i} onClick={()=>this.onPilihSeatClick(index,i)} className='rounded btn-order mr-2 mt-2 text-center'>
-        //                             {alphabet[index] + (i+1)}
-        //                         </button>
-        //                     )
-        //                 })
-        //             }
-        //         </div>
-        //     )
-        // })
-        // return jsx
     }
 
     renderButton=()=>{
@@ -293,7 +250,8 @@ class Belitiket extends Component {
         }
         return (
             <div>
-                404 not found
+                <Link to={'/'} style={{position:'absolute', fontSize:'45px', color:'transparant', paddingLeft:'600px',paddingTop:'750px'}}>________________</Link>
+                <img src="https://assets.materialup.com/uploads/c13818e8-9e42-4f4d-b657-38743a81b270/preview.gif" style={{width:'100%'}}></img>
             </div>
         )
     }

@@ -122,7 +122,7 @@ class Cart extends Component {
                 .then((res)=>{
                     this.props.LoginSuccessAction(res.data)
                     Swal.fire(
-                        'Anda berhasil registrasi',
+                        'Anda berhasil CheckOut',
                         'Klik Tombol OK Untuk Melanjutkan',
                         'success'
                     )

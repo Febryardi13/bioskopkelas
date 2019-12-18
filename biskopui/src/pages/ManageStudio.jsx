@@ -5,6 +5,7 @@ import {Modal,ModalBody,ModalHeader,ModalFooter} from 'reactstrap'
 import Jump from 'react-reveal/Jump'
 import { APIURL } from '../supports/ApiUrl';
 import Swal from 'sweetalert2'
+import {Link} from 'react-router-dom'
 
 class ManageStudio extends Component {
     state = { 
@@ -136,8 +137,46 @@ class ManageStudio extends Component {
         }  
      }
 
-     updateDataClick = () =>{
-         
+     updateDataClick = (indexEdit) =>{
+        var id = this.state.dataStudio[this.state.indexEdit].id
+        var nama = this.refs.editnama.value
+        var alamat = this.refs.editalamat.value
+        var provinsi = this.refs.editprovinsi.value
+        var kota = this.refs.editkota.value
+        var telepon = this.refs.edittelepon.value
+        var longitude = this.refs.editlongitude.value
+        var latitude = this.refs.editlatitude.value
+        var jumlahstudio = this.refs.editjumlahstudio.value
+        var jumlahkursi = this.refs.editjumlahkursi.value
+
+        var data = {
+            nama,
+            alamat,
+            provinsi,
+            kota,
+            telepon,
+            longitude,
+            latitude,
+            jumlahstudio,
+            jumlahkursi
+        }
+        console.log(id)
+        Axios.put(`${APIURL}studios/${id}`,data)
+        .then(()=>{
+            Axios.get(`${APIURL}studios`)
+            .then((res)=>{
+                this.setState({dataStudio:res.data,modalEdit:false})
+                Swal.fire(
+                    'Data Berhasil Diupdate',
+                    'Klik Tombol OK Untuk Melanjutkan',
+                    'success'
+              )
+            }).catch((err)=>{
+                console.log(err)
+            })
+        }).catch((err)=>{
+            console.log(err)
+        })
      }
 
     deleteDataClick = (indexDelete) =>{
@@ -169,7 +208,7 @@ class ManageStudio extends Component {
                     <TableRow key={index}>
                         <TableCell>{index+1}</TableCell>
                         <TableCell>{val.nama}</TableCell>
-                        {this.state.readmoreselected === index?
+                        {/* {this.state.readmoreselected === index?
                             <TableCell>
                                 {val.alamat}
                                 <span style={{color:'blue'}} onClick={()=>this.setState({readmoreselected:-1})}>
@@ -183,13 +222,14 @@ class ManageStudio extends Component {
                                 Read more...
                                 </span>
                             </TableCell>
-                        }
+                        } */}
+                        <TableCell>{val.alamat}</TableCell>
                         <TableCell>{val.kota}</TableCell>
                         <TableCell>{val.telepon}</TableCell>
                         <TableCell>{val.jumlahstudio}</TableCell>
                         <TableCell>{val.jumlahkursi}</TableCell>
                         <TableCell>
-                            <button className='btn btn-success mr-1 ml-1'>EDIT</button>
+                            <button className='btn btn-success mr-1 ml-1' onClick={()=>{this.setState({modalEdit:true,indexEdit:index})}}>EDIT</button>
                             <button className='btn btn-danger mr-1 ml-1' onClick={()=>{this.setState({modalDelete:true,indexDelete:index})}}>DELETE</button>
                         </TableCell>
                     </TableRow>
@@ -199,8 +239,9 @@ class ManageStudio extends Component {
 
 
     render() { 
-        // const {dataStudio,indexDelete} = this.state
-        const length = this.state.dataStudio
+        if(this.props.user === 'admin' && this.props.id===true){
+            const {dataStudio,indexEdit} = this.state
+        const {length} = dataStudio
         if(length===0){
             return <div>Loading...</div>
         }
@@ -226,23 +267,24 @@ class ManageStudio extends Component {
                             <button className='btn btn-warning mt-2' onClick={()=>{this.setState({modalAdd:false})}}>CANCEL</button>
                         </ModalFooter>
                     </Modal>
-                    <Modal>
+                    <Modal isOpen={this.state.modalEdit} toggle={()=>this.setState({modalEdit:false})}>
                         <ModalHeader>
-                            Edit Data 
+                            Edit Data
                         </ModalHeader>
                         <ModalBody>
-                            <input type="text"  ref="editnama" placeholder='Nama Studio' className="form-control mt-2"/>
-                            <textarea rows='5'  ref="editalamat" placeholder='Alamat Studio' className="form-control mt-2"/>
-                            <input type="text"  ref="editprovinsi" placeholder='Provinsi Asal Studio' className="form-control mt-2"/>
-                            <input type="text"  ref="editkota" placeholder='Asal Kota Studio' className="form-control mt-2"/>
-                            <input type="text"  ref="edittelepon" placeholder='Contact Telpon ' className="form-control mt-2"/>
-                            <input type="text"  ref="editlongitude" placeholder='Longitude : -6.2259866' className="form-control mt-2"/>
-                            <input type="text"  ref="editlatitude" placeholder='Latitude :107.0010503,15' className="form-control mt-2"/>
-                            <input type="number"  ref="editjumlahstudio" placeholder='Jumlah Studio' className="form-control mt-2"/>
-                            <input type="number"  ref="editjumlahkursi" placeholder='Jumlah Kursi Per Studio' className="form-control mt-2"/>
+                            Nama<input type="text" defaultValue={dataStudio[indexEdit].nama} ref="editnama" placeholder='Nama Studio' className="form-control mt-2"/>
+                            Alamat<textarea rows='5' defaultValue={dataStudio[indexEdit].alamat}  ref="editalamat" placeholder='Alamat Studio' className="form-control mt-2"/>
+                            Provinsi<input type="text" defaultValue={dataStudio[indexEdit].provinsi} ref="editprovinsi" placeholder='Provinsi Asal Studio' className="form-control mt-2"/>
+                            Kota<input type="text" defaultValue={dataStudio[indexEdit].kota}  ref="editkota" placeholder='Asal Kota Studio' className="form-control mt-2"/>
+                            Telepon<input type="text" defaultValue={dataStudio[indexEdit].telepon}  ref="edittelepon" placeholder='Contact Telpon ' className="form-control mt-2"/>
+                            Longitude<input type="text" defaultValue={dataStudio[indexEdit].longitude}  ref="editlongitude" placeholder='Longitude : -6.2259866' className="form-control mt-2"/>
+                            Latitude<input type="text" defaultValue={dataStudio[indexEdit].latitude}  ref="editlatitude" placeholder='Latitude :107.0010503,15' className="form-control mt-2"/>
+                            Jumlah Studio<input type="number" defaultValue={dataStudio[indexEdit].jumlahstudio}  ref="editjumlahstudio" placeholder='Jumlah Studio' className="form-control mt-2"/>
+                            Jumlah Kursi<input type="number" defaultValue={dataStudio[indexEdit].jumlahkursi}  ref="editjumlahkursi" placeholder='Jumlah Kursi Per Studio' className="form-control mt-2"/>
                         </ModalBody>
                         <ModalFooter>
-
+                            <button className='btn btn-danger mr-2' onClick={this.updateDataClick}>UPDATE DATA</button>
+                            <button className='btn btn-success' onClick={()=>{this.setState({modalEdit:false})}}>CANCEL</button>
                         </ModalFooter>
                     </Modal>
                     <Modal isOpen={this.state.modalDelete} toggle={()=>this.setState({modalDelete:false})}>
@@ -281,6 +323,21 @@ class ManageStudio extends Component {
                     </Jump>
                 </div>
          );
+        }
+        return(
+            <div>
+                <Link to={'/'} style={{position:'absolute', fontSize:'45px', color:'transparant', paddingLeft:'600px',paddingTop:'750px'}}>________________</Link>
+                <img src="https://assets.materialup.com/uploads/c13818e8-9e42-4f4d-b657-38743a81b270/preview.gif" style={{width:'100%'}}></img>
+            </div>
+        )
+        
+    }
+}
+
+const MapStateToProps = (state)=>{
+    return {
+        user:state.Auth.id,
+        role:state.Auth.role
     }
 }
  

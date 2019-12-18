@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import Axios from 'axios'
 import {APIURL} from './../supports/ApiUrl'
 import Swal from 'sweetalert2'
+import {Link} from 'react-router-dom'
 
 
 class ChangePassword extends Component {
@@ -36,7 +37,7 @@ class ChangePassword extends Component {
             .then((res)=>{
                 this.setState({data:res.data})
                 Swal.fire(
-                    'Anda berhasil registrasi',
+                    'Anda berhasil ganti password',
                     'Klik Tombol OK Untuk Melanjutkan',
                     'success'
                 )
@@ -50,7 +51,8 @@ class ChangePassword extends Component {
 
 
     render() { 
-        return ( <div>
+        if(this.props.UserId){
+            return ( <div>
                     <div className="d-flex justify-content-center py-5">
                         <div style={{width:'500px', border:'1px solid black'}} className='rounded p-2'>
                         <h1>Ganti Password</h1>
@@ -75,11 +77,20 @@ class ChangePassword extends Component {
                 </div>
             </div> 
         );
+        }
+        return (
+            <div>
+                <Link to={'/'} style={{position:'absolute', fontSize:'45px', color:'transparant', paddingLeft:'600px',paddingTop:'750px'}}>________________</Link>
+                <img src="https://assets.materialup.com/uploads/c13818e8-9e42-4f4d-b657-38743a81b270/preview.gif" style={{width:'100%'}}></img>
+            </div>
+        )
     }
 }
 
 const MapStateToProps = (state)=>{
-    return {user:state.Auth.id}
+    return {
+        user:state.Auth.id
+    }
 }
  
 export default connect(MapStateToProps) (ChangePassword);

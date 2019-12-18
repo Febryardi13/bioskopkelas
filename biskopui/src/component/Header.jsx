@@ -38,9 +38,12 @@ const Header = (props) => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>
-          <NavItem>
-  <NavLink href={'/Cart'}><MdShoppingCart style={{color:'yellow',fontSize:'28'}}/>{props.cart}</NavLink>
-          </NavItem> 
+          
+          {/* <NavItem>
+            <NavLink href={'/Cart'}><MdShoppingCart style={{color:'yellow',fontSize:'28'}}/>{props.cart}</NavLink>
+          </NavItem>  */}
+          
+          
           {props.namauser === '' ?
           <NavItem>
             <NavLink href={'/Login'} className='ml-5' style={{color:'yellow',fontWeight:'bold'}}>Login</NavLink>
@@ -79,7 +82,10 @@ const Header = (props) => {
                 </DropdownToggle>
                 <DropdownMenu right>
                     <DropdownItem>
-                      History
+                    <Link to={'/Cart'}><MdShoppingCart style={{textDecoration:'none',color:'lightseagreen',fontSize:'28'}}/>{props.cart}</Link>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <Link to={'/History'} style={{textDecoration:'none',color:'lightseagreen'}}>History</Link>
                     </DropdownItem>
                     <DropdownItem>
                       <Link to={'/ChangePassword'} style={{textDecoration:'none',color:'lightseagreen'}}>Change Password</Link>

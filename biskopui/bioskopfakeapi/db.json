@@ -85,24 +85,6 @@
       "usia": "https://cdn2.iconfinder.com/data/icons/spa-solid-icons-1/48/25-512.png"
     },
     {
-      "id": 4,
-      "title": "The Good Liar",
-      "sutradara": "Bill Condon",
-      "durasi": 121,
-      "jadwal": [
-        14,
-        16,
-        20
-      ],
-      "sinopsis": "Berawal dari perkenalan di situs kencan daring, Roy (Ian McKellen) seorang penipu ulung berhasil mendekati Betty, janda kaya raya dengan harta melimpah. Tapi hubungan keduanya mendapat respon keras dari keluarga Betty, yang menduga Roy punya niat jahat. Saat memulai misinya ternyata Roy justru jatuh cinta kepada Betty. Roy yang awalnya bisa menjalankan misinya dengan mudah, justru harus melalui melewati jalan yang bisa membahayakan dirinya.",
-      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157423720057093_287x421.jpg",
-      "genre": "Drama",
-      "produksi": "Warner Bros. Pictures",
-      "trailer": "https://www.youtube.com/embed/ljKzFGpPHhw",
-      "studioId": 2,
-      "usia": "http://minikino.org/indonesiaraja/wp-content/uploads/sites/5/2016/05/17.png"
-    },
-    {
       "id": 5,
       "title": "Ford v Ferrari",
       "image": "https://media.21cineplex.com/webcontent/gallery/pictures/1572858859730_287x421.jpg",
@@ -156,28 +138,16 @@
   ],
   "studios": [
     {
-      "id": 1,
-      "nama": "ARTHA GADING XXI",
+      "nama": "ARTHA GADING XXI DISANA",
       "alamat": "Jl. Boulevard Artha Gading No.18 RW.8 Klp. Gading Bar Kec. Klp. Gading Kota Jkt Utara 14240",
       "provinsi": "Jakarta",
       "kota": "Jakarta Utara",
       "telepon": "(021) 45864123",
       "longitude": "-6.146122",
       "latitude": "106.892755",
-      "jumlahstudio": 7,
-      "jumlahkursi": 220
-    },
-    {
-      "id": 2,
-      "nama": "LOTTE SHOPPING AVENUE XXI",
-      "alamat": "Jl. Prof. DR. Satrio No.3-5, RT.18/RW.4, Kuningan, Karet Kuningan, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950",
-      "provinsi": "Jakarta",
-      "kota": "Jakarta Selatan",
-      "telepon": "(021) 29889421",
-      "longitude": "-6.223519",
-      "latitude": "106.823320",
-      "jumlahstudio": 10,
-      "jumlahkursi": 240
+      "jumlahstudio": "7",
+      "jumlahkursi": "220",
+      "id": 1
     },
     {
       "id": 3,
@@ -211,7 +181,7 @@
       "movieId": 3,
       "jadwal": 18,
       "totHarga": 50000,
-      "bayar": false
+      "bayar": true
     },
     {
       "id": 2,
@@ -227,7 +197,7 @@
       "movieId": 3,
       "jadwal": 18,
       "totHarga": 50000,
-      "bayar": false
+      "bayar": true
     },
     {
       "userId": 3,
@@ -276,6 +246,14 @@
       "bayar": false,
       "jadwal": 18,
       "id": 9
+    },
+    {
+      "userId": 3,
+      "movieId": 5,
+      "totHarga": 30000,
+      "bayar": false,
+      "jadwal": 18,
+      "id": 10
     }
   ],
   "ordersDetails": [
@@ -356,6 +334,12 @@
       "seat": 7,
       "row": 0,
       "id": 13
+    },
+    {
+      "orderId": 10,
+      "seat": 14,
+      "row": 1,
+      "id": 14
     }
   ],
   "transactions": [],

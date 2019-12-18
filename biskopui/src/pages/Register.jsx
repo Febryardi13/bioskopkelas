@@ -3,6 +3,7 @@ import Axios from 'axios'
 import { APIURL } from '../supports/ApiUrl';
 import Swal from 'sweetalert2';
 import {Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 
 
 class Register extends Component {
@@ -45,6 +46,7 @@ class Register extends Component {
                      }).catch((err)=>{
                          console.log(err)
                      })
+                     return <Redirect to={'/'}/>
                  }
              }else{
                  this.setState({error:'Username sudah terdaftar'})

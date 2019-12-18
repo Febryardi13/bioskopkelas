@@ -5,6 +5,8 @@ import { APIURL } from '../supports/ApiUrl';
 import {Modal,ModalBody,ModalFooter,ModalHeader} from 'reactstrap'
 import Jump from 'react-reveal/Jump'
 import Swal from 'sweetalert2'
+import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 
 class ManageAdmin extends Component {
@@ -333,7 +335,8 @@ class ManageAdmin extends Component {
 
 
     render() { 
-        const {dataFilm,indexEdit}=this.state
+        if(this.props.user === 'admin' && this.props.id===true){
+            const {dataFilm,indexEdit}=this.state
         const {length} = dataFilm
         if(length===0){
             return <div>Loading...</div>
@@ -459,7 +462,21 @@ class ManageAdmin extends Component {
                 </Table>
             </Jump>
         </div> );
+        }
+        return (
+            <div>
+                <Link to={'/'} style={{position:'absolute', fontSize:'45px', color:'transparant', paddingLeft:'600px',paddingTop:'750px'}}>________________</Link>
+                <img src="https://assets.materialup.com/uploads/c13818e8-9e42-4f4d-b657-38743a81b270/preview.gif" style={{width:'100%'}}></img>
+            </div>
+        )
+    }
+}
+
+const MapStateToProps = (state)=>{
+    return {
+        user:state.Auth.id,
+        role:state.Auth.role
     }
 }
  
-export default ManageAdmin;
+export default connect(MapStateToProps) (ManageAdmin);

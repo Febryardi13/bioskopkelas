@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
 import './App.css';
+import {Switch,Route} from 'react-router-dom'
+import {connect} from 'react-redux'
+import {LoginSuccessAction} from './/redux/actions'
+import {CountAction} from './redux/actions'
+import {APIURL} from './supports/ApiUrl'
 import Header from './component/Header'
 import Home from './pages/Home'
 import ManageAdmin from './pages/ManageAdmin'
@@ -7,15 +12,11 @@ import ManageStudio from './pages/ManageStudio'
 import Login from './pages/Login';
 import Register from './pages/Register'
 import Belitiket from './pages/Belitiket'
-import {Switch,Route} from 'react-router-dom'
-import {connect} from 'react-redux'
-import {LoginSuccessAction} from './/redux/actions'
-import {CountAction} from './redux/actions'
 import Axios from 'axios';
-import {APIURL} from './supports/ApiUrl'
 import Moviedetail from './pages/Moviedetail';
 import Cart from './pages/Cart';
 import ChangePassword from './pages/ChangePassword'
+import History from './pages/History'
  
 class App extends Component {
     state={
@@ -70,6 +71,7 @@ class App extends Component {
                 <Route path='/Moviedetail/:id' component={Moviedetail} exact/>
                 <Route path='/Belitiket' component={Belitiket} exact/>
                 <Route path='/Cart' component={Cart} exact/>
+                <Route path='/History' component={History} exact/>
             </Switch>
         </div>
          );
