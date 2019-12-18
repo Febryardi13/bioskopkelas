@@ -1,0 +1,363 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "dobleh",
+      "password": "qwe",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "username": "jamal",
+      "password": "12",
+      "role": "user"
+    },
+    {
+      "username": "febry",
+      "password": "123",
+      "role": "user",
+      "id": 4
+    }
+  ],
+  "coomingsoonmovies": [
+    {
+      "id": 1,
+      "title": "Jumanji: The Next Level",
+      "sutradara": "Jake Kesdan",
+      "durasi": 121,
+      "sinopsis": "Dwayne Johnson, Karen Gillan, Jack Black dan Kevin Hart kembali ke Jumanji, keempatnya harus menyelamatkan salah satu teman mereka. Namun permainan telah berubah. Para pemain kini harus lebih berani melintasi rintangan ekstrem dan kembali dengan selamat dari permainan paling berbahaya di dunia.",
+      "image": "http://mecinemas.com/assets/img/posters/JumanjiTheNextLevel8_banner.jpg",
+      "genre": "Action",
+      "produksi": "Columbia Pictures",
+      "button": "Play Trailer"
+    },
+    {
+      "id": 2,
+      "title": "Frozen II",
+      "sutradara": "Chris Buck, Jennifer Lee",
+      "durasi": 200,
+      "sinopsis": "Anna, Elsa, Kristoff, Olaf dan Sven pergi meninggalkan Arendelle untuk melakukan perjalanan ke sebuah tempat asing dan penuh keajaiban. Mereka berangkat untuk menemukan asal usul kekuatan Elsa dan juga untuk menyelamatkan kerajaan mereka.",
+      "image": "https://img.spicinemas.in/resources/images/movies/frozen-ii-english-3d/1000x320.jpg",
+      "genre": "Animation, Adventure, Comedy",
+      "produksi": "Walt Disney Pictures",
+      "button": "Play Trailer"
+    }
+  ],
+  "movies": [
+    {
+      "studioId": "1",
+      "title": "Eggnoid",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157356145959988_287x421.jpg",
+      "sinopsis": "Selama 2 tahun terakhir Ran dan Eggy telah menjadi sepasang sahabat yang tak terpisahkan. Ran yang dulu kesepian dan penuh dengan kesedihan, kini menjadi sosok yang lebih bahagia karena Eggy. Perasaan yang awalnya hanya sebagai sahabat, pelan-pelan berubah menjadi cinta. Sayangnya, Eggy bukan manusia biasa. Melainkan Eggnoid yang dikirim dari masa depan. Sebagai Eggnoid, Eggy memiliki aturan-aturan yang tidak boleh dilanggar. Kini, Eggy terancam dikirim pulang ke masa depan dan berpisah dengan Ran selamanya karena salah satu aturan besar yang tidak boleh ia langgar adalah jatuh cinta dan pacaran dengan Ran.",
+      "sutradara": "Naya Anandita",
+      "durasi": "200",
+      "genre": "Drama, Sci-Fi",
+      "produksi": "SORAYA ENTERTAINMENT",
+      "jadwal": [
+        16,
+        18
+      ],
+      "trailer": "https://www.youtube.com/embed/Y7maBc4tx6g",
+      "usia": "https://cdn2.iconfinder.com/data/icons/spa-solid-icons-1/48/25-512.png",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "title": "Frozen II",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157250534676979_287x421.jpg",
+      "sinopsis": "Anna, Elsa, Kristoff, Olaf dan Sven pergi meninggalkan Arendelle untuk melakukan perjalanan ke sebuah tempat asing dan penuh keajaiban. Mereka berangkat untuk menemukan asal usul kekuatan Elsa dan juga untuk menyelamatkan kerajaan mereka.",
+      "sutradara": "Chris Buck, Jennifer Lee",
+      "durasi": "200",
+      "genre": "Animation, Adventure, Comedy",
+      "produksi": "SORAYA ENTERTAINMENT",
+      "jadwal": [
+        18,
+        20
+      ],
+      "trailer": "https://www.youtube.com/embed/Zi4LMpSDccc",
+      "studioId": "1",
+      "usia": "https://cdn2.iconfinder.com/data/icons/spa-solid-icons-1/48/25-512.png"
+    },
+    {
+      "id": 4,
+      "title": "The Good Liar",
+      "sutradara": "Bill Condon",
+      "durasi": 121,
+      "jadwal": [
+        14,
+        16,
+        20
+      ],
+      "sinopsis": "Berawal dari perkenalan di situs kencan daring, Roy (Ian McKellen) seorang penipu ulung berhasil mendekati Betty, janda kaya raya dengan harta melimpah. Tapi hubungan keduanya mendapat respon keras dari keluarga Betty, yang menduga Roy punya niat jahat. Saat memulai misinya ternyata Roy justru jatuh cinta kepada Betty. Roy yang awalnya bisa menjalankan misinya dengan mudah, justru harus melalui melewati jalan yang bisa membahayakan dirinya.",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157423720057093_287x421.jpg",
+      "genre": "Drama",
+      "produksi": "Warner Bros. Pictures",
+      "trailer": "https://www.youtube.com/embed/ljKzFGpPHhw",
+      "studioId": 2,
+      "usia": "http://minikino.org/indonesiaraja/wp-content/uploads/sites/5/2016/05/17.png"
+    },
+    {
+      "id": 5,
+      "title": "Ford v Ferrari",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/1572858859730_287x421.jpg",
+      "sinopsis": "2 pemenang Academy Award, Matt Damon dan Christian Bale berperan di FORD v FERRARI, berdasarkan kisah nyata yang luar biasa dari Carroll Shelby (Damon), seorang perancang mobil visioner dari Amerika bersama Ken Miles (Bale), seorang pembalap Inggris yang tak kenal takut. Mereka bersama-sama berjuang menghadapi campur tangan perusahaan, hukum fisika, dan masalah pribadi mereka sendiri ketika membangun mobil balap revolusioner bagi Ford Motor Company untuk menantang mobil balap buatan Enzo Ferrari yang mendomniasi 24 Jam Le Mans di Perancis pada tahun 1966.",
+      "sutradara": "James Mangold",
+      "durasi": "121",
+      "genre": "Action, Biography, Drama",
+      "produksi": "SORAYA ENTERTAINMENT",
+      "jadwal": [
+        12,
+        16
+      ],
+      "trailer": "",
+      "studioId": "1",
+      "usia": "https://images.squarespace-cdn.com/content/v1/5d25ca6ac7659900018935f1/1563164122115-AG8XAG4R2UYMAX0PR4NI/ke17ZwdGBToddI8pDm48kC-adAiL1NYDeEo1kVMbfbRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIXJtcXdnhT6gF3vTZbjl0vBuG85yWp0EFCgtrpema0QA/13.png"
+    },
+    {
+      "title": "Habibie & Ainun 3",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157466395513352_287x421.jpg",
+      "sinopsis": "Kisah Ainun (Maudy Ayunda) sebagaimana remaja di usianya ,punya kisah kasih yang cukup unik, menggelitik dan menarik.Saat di SMA, Ainun dikenal sebagai sosok cerdas yang menjadi pujaan di sekolahnya dan menjadi incaran banyak siswa laki-laki, termasuk Habibie. Hubungan mereka bermula dari sebuah pertemanan.",
+      "sutradara": "Hanung Bramantyo",
+      "durasi": "121",
+      "genre": "Drama",
+      "produksi": "SORAYA ENTERTAINMENT",
+      "jadwal": [
+        14,
+        16
+      ],
+      "trailer": "https://www.youtube.com/embed/7uV166LCp10",
+      "studioId": "3",
+      "id": 6,
+      "usia": "https://images.squarespace-cdn.com/content/v1/5d25ca6ac7659900018935f1/1563164122115-AG8XAG4R2UYMAX0PR4NI/ke17ZwdGBToddI8pDm48kC-adAiL1NYDeEo1kVMbfbRZw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZamWLI2zvYWH8K3-s_4yszcp2ryTI0HqTOaaUohrI8PIXJtcXdnhT6gF3vTZbjl0vBuG85yWp0EFCgtrpema0QA/13.png"
+    },
+    {
+      "studioId": "1",
+      "title": "Star Wars: The Rise of Skywalker",
+      "image": "https://media.21cineplex.com/webcontent/gallery/pictures/157416306567553_287x421.jpg",
+      "sinopsis": "Resistance yang selamat sekali lagi akan menghadapi First Order dalam sebuah saga final yang akan menentukan nasib mereka.  Resistance yang selamat sekali lagi akan menghadapi First Order dalam sebuah saga final yang akan menentukan nasib mereka.  ",
+      "sutradara": "J.J. Abrams",
+      "durasi": "142",
+      "genre": "Action, Adventure, Fantasy",
+      "produksi": "Walt Disney Pictures",
+      "jadwal": [
+        12,
+        14
+      ],
+      "trailer": "https://www.youtube.com/embed/ssGXzh4MAYM",
+      "usia": "http://minikino.org/indonesiaraja/wp-content/uploads/sites/5/2016/05/17.png",
+      "id": 7
+    }
+  ],
+  "studios": [
+    {
+      "id": 1,
+      "nama": "ARTHA GADING XXI",
+      "alamat": "Jl. Boulevard Artha Gading No.18 RW.8 Klp. Gading Bar Kec. Klp. Gading Kota Jkt Utara 14240",
+      "provinsi": "Jakarta",
+      "kota": "Jakarta Utara",
+      "telepon": "(021) 45864123",
+      "longitude": "-6.146122",
+      "latitude": "106.892755",
+      "jumlahstudio": 7,
+      "jumlahkursi": 220
+    },
+    {
+      "id": 2,
+      "nama": "LOTTE SHOPPING AVENUE XXI",
+      "alamat": "Jl. Prof. DR. Satrio No.3-5, RT.18/RW.4, Kuningan, Karet Kuningan, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12950",
+      "provinsi": "Jakarta",
+      "kota": "Jakarta Selatan",
+      "telepon": "(021) 29889421",
+      "longitude": "-6.223519",
+      "latitude": "106.823320",
+      "jumlahstudio": 10,
+      "jumlahkursi": 240
+    },
+    {
+      "id": 3,
+      "nama": "GRAND METROPOLITAN XXI",
+      "alamat": "Grand Metropolitan Mall, Jl. KH. Noer Ali, RT.007/RW.003, Pekayon Jaya, Kec. Bekasi Sel., Kota Bks, Jawa Barat 17148",
+      "provinsi": "Jawa Barat",
+      "kota": "Bekasi",
+      "telepon": "(021) 29464660",
+      "longitude": "-6.248795",
+      "latitude": "106.984506",
+      "jumlahstudio": 10,
+      "jumlahkursi": 240
+    },
+    {
+      "nama": "CIPUTRA CIBUBUR XXI",
+      "alamat": "MAL CIPUTRA CIBUBUR LT. 3 Jl. Alternatif Cibubur Cileungsi Km. 4 Bekasi 17435",
+      "provinsi": "Jawa Barat",
+      "kota": "Cileungsi",
+      "telepon": "(021) 29377421",
+      "longitude": "-6.3830867",
+      "latitude": "106.9260003,15",
+      "jumlahstudio": "5",
+      "jumlahkursi": "200",
+      "id": 4
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": 2,
+      "movieId": 3,
+      "jadwal": 18,
+      "totHarga": 50000,
+      "bayar": false
+    },
+    {
+      "id": 2,
+      "userId": 3,
+      "movieId": 3,
+      "jadwal": 18,
+      "totHarga": 50000,
+      "bayar": false
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "movieId": 3,
+      "jadwal": 18,
+      "totHarga": 50000,
+      "bayar": false
+    },
+    {
+      "userId": 3,
+      "movieId": 3,
+      "totHarga": 30000,
+      "bayar": false,
+      "jadwal": 18,
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "movieId": 3,
+      "totHarga": 30000,
+      "bayar": false,
+      "jadwal": 20,
+      "id": 5
+    },
+    {
+      "userId": 3,
+      "movieId": 2,
+      "totHarga": 30000,
+      "bayar": false,
+      "jadwal": 16,
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "movieId": 2,
+      "totHarga": 60000,
+      "bayar": false,
+      "jadwal": 18,
+      "id": 7
+    },
+    {
+      "userId": 3,
+      "movieId": 2,
+      "totHarga": 30000,
+      "bayar": false,
+      "jadwal": 18,
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "movieId": 3,
+      "totHarga": 30000,
+      "bayar": false,
+      "jadwal": 18,
+      "id": 9
+    }
+  ],
+  "ordersDetails": [
+    {
+      "id": 1,
+      "orderId": 1,
+      "row": 2,
+      "seat": 4
+    },
+    {
+      "id": 2,
+      "orderId": 1,
+      "row": 2,
+      "seat": 5
+    },
+    {
+      "id": 3,
+      "orderId": 2,
+      "row": 2,
+      "seat": 6
+    },
+    {
+      "id": 4,
+      "orderId": 2,
+      "row": 2,
+      "seat": 7
+    },
+    {
+      "id": 5,
+      "orderId": 3,
+      "row": 2,
+      "seat": 8
+    },
+    {
+      "id": 6,
+      "orderId": 3,
+      "row": 2,
+      "seat": 9
+    },
+    {
+      "orderId": 4,
+      "seat": 6,
+      "row": 0,
+      "id": 7
+    },
+    {
+      "orderId": 5,
+      "seat": 19,
+      "row": 10,
+      "id": 8
+    },
+    {
+      "orderId": 6,
+      "seat": 6,
+      "row": 0,
+      "id": 9
+    },
+    {
+      "orderId": 7,
+      "seat": 0,
+      "row": 0,
+      "id": 10
+    },
+    {
+      "orderId": 7,
+      "seat": 1,
+      "row": 0,
+      "id": 11
+    },
+    {
+      "orderId": 8,
+      "seat": 4,
+      "row": 0,
+      "id": 12
+    },
+    {
+      "orderId": 9,
+      "seat": 7,
+      "row": 0,
+      "id": 13
+    }
+  ],
+  "transactions": [],
+  "transactionsDetails": []
+}

@@ -1,0 +1,97 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+/* div{
+  border: yellow 1px solid;
+} */
+
+.main-background{
+  background-color:whitesmoke;
+}
+
+.kartu{
+  border-radius: 10px;
+  overflow: hidden;
+}
+.gambar{
+  transition: 700ms;
+}
+.gambar:hover{
+  transform: scale(1.1);
+  border-radius: 10px;
+
+}
+.gambaar1{
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.kartu{
+  border-radius: 10px;
+  border: transparent;
+  overflow: hidden;
+}
+
+.card-title{
+  text-align: justify;
+}
+
+.username:focus{
+  outline: transparent;
+}
+
+.trailer{
+  background-color: transparent ;
+  width: 800px;
+  height: 500px;
+  padding: 0;
+}
+
+.btn-order{
+  width: 43px;
+  height: 40px;
+  background-color: whitesmoke;
+  color:#5b0008;
+  border: 1px solid  #5b0008;
+  transition: 200ms;
+}
+
+.btn-order:focus{
+  outline-color: #5b0008;
+}
+
+.btn-order:hover{
+  font-weight: bolder;
+}
+
+.btn-pilih{
+  color:whitesmoke;
+  background-color:  #5b0008d7;
+  border: 1px solid whitesmoke;
+  width: 43px;
+  height: 40px;
+}
+
+.btn-disble{
+  color:whitesmoke;
+  background-color:  #5b0008;
+  border: 1px solid whitesmoke;
+  width: 43px;
+  height: 40px;
+}
+
+.text-header-detMovie{
+  color: darkslategray;
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.btn-detail-movie{
+  width: 150px;
+}
+
+.link-decor{
+  text-decoration: none;
+}
+
